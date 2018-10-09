@@ -37,4 +37,14 @@ public class UserInfoController {
     public String userDel(){
         return "userInfoDel";
     }
+
+    /**
+     * 用户编辑;
+     * @return
+     */
+    @RequestMapping("/userEdit")
+    @RequiresPermissions("userInfo:edit")//权限管理;
+    public String userEdit(){
+        return "userInfoEdit";
+    }
 }
